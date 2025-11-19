@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  .body {
+    background-color: black;
+  }
+
+.div{
+  color: white;
+}
+</style>
+
+
+</head>
+<body class="body">
+  <div class="div">
+  <h1>Color Change</h1>
+  <button id="green-btn">Make it green</button>
+  <button id="blue-btn">Make it blue</button>
+  <button id="red-btn">Make it red</button>
+  <button  id="random-btn">Random color</button>
+
+</div>
+
+
+  <script>
+    const h1 = document.querySelector('h1');
+
+    const button1 = document.getElementById("green-btn");
+    const button2 = document.getElementById("red-btn");
+    const button3 = document.getElementById("blue-btn");
+    button1.addEventListener("click", function () { h1.style.color = "green"; });
+    button2.addEventListener("click", function () { h1.style.color = "red"; });
+     button3.addEventListener("click", function () { h1.style.color = "blue"; });
+
+    
+     const colours = ["green", "red","blue","orange", "purple"];
+     
+     const  button = document.getElementById('random-btn');
+     
+     button.addEventListener("click",function(){ 
+      let randomIndex = Math.floor(Math.random() * colours.length)
+      h1.style.color = colours[randomIndex]});
+
+
+</script>
+</body>
+</html>
