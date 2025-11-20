@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+</head>
+
+<style>
+  .body {
+    background-color: black;
+    color: #fff;
+  }
+
+  button {
+    font-size: 14px;
+    
+  }
+
+  ul{
+    font-size: 30px;
+    
+  }
+  del {
+    padding: 30px;
+    color: red;
+    cursor: pointer;
+    
+  }
+</style>
+
+<body class="body">
+
+  <input type="text" id="task-input">
+  <button id="add">Add Task</button>
+  <button id="rmv">Remove Task</button>
+
+  <ul id="list">
+    <li>Kaam karle</li>
+    <li>Mehnat karle</li>
+  </ul>
+
+  <script>
+    const list = document.getElementById('list');
+    const add = document.getElementById('add');
+    const remove = document.getElementById('rmv');
+    const input = document.getElementById('task-input');
+
+    add.addEventListener("click", function () {
+      const li = document.createElement('li');
+      const del = document.createElement('del');
+      li.innerText = input.value;
+      del.innerText = "X";
+      li.appendChild(del);
+      del.addEventListener("click", function () {
+      li.remove();
+      })
+      list.appendChild(li);
+    })
+
+    remove.addEventListener("click",function(){
+      const rl = list.lastElementChild;
+      rl.remove();
+    })
+  </script>
+
+</body>
+
+</html>
