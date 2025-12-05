@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Create Practice</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+
+    .big {
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script>
+    
+    let newp1= document.createElement('p');
+    newp1.innerText = "Item 1";
+    let newp2 = document.createElement('p');
+    newp2.innerText = "Item 2";
+    newp2.classList.add('highlight')
+    let newp3 = document.createElement('p');
+    newp3.innerText = "Item 3";
+
+    let button = document.createElement('button');
+    button.textContent = "Click Me";
+
+    let container = document.getElementById('container');
+    container.appendChild(newp1);
+    container.appendChild(newp2);
+    container.appendChild(newp3);
+    container.appendChild(button);
+
+    newp3.remove();
+
+    
+
+
+
+  </script>
+</body>
+
+</html>
